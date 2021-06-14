@@ -15,17 +15,22 @@
 </div>
 
 <script>
-
     var questions = [];
 
     function clickButton() {
         var change = document.getElementById("control");
         change.innerHTML = "Next Question";
+        if (questions.length == 2)
+        {
+            change.innerHTML = "Last Question";
+        }
         if (questions.length == 1)
         {
-            change.innerHTML == "Last Question";
+            change.innerHTML = "Restart";
+            fillArray();
         }
     }
+
 
     function fillArray() {
         fetch("questions.json")
@@ -45,14 +50,9 @@
         var currentIndex = Math.floor(Math.random() * questions.length);
         var currentQuestion = questions[currentIndex];
         document.getElementById("displayQuestion").innerHTML = currentQuestion;
-        console.log(currentQuestion);
         questions.splice(currentIndex, 1);
-        console.log(questions.length);
     }
 </script> 
 
 </body>
 </html>
-
-<!-- notes:
-find some way to no longer repeat a question-->
