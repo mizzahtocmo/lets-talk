@@ -1,7 +1,20 @@
 [
-    "Question A",
-    "Question B",
-    "Question C",
-    "Question D",
-    "Question E"
+    "Are you an extrovert, introvert, or ambivert?",
+    "Are you an external or internal processor?",
+    "Are you adventurous, a homebody, or a little bit of both?",
+    "Are you secretive or an open book?",
+    "Are you a picky eater? What foods can't you eat?",
+    "Would you consider yourself moody or emotionally steady?",
+    "Are you a procrastinator?",
+    "Do you prefer a thoroughly-planned schedule or loosely-planned schedule?",
+    "Which of these has a stronger influence on your decisions: emotions or logic?",
+    "Were you a well-behaved or rebellious kid? Have things changed or stayed the same?",
+    "Do you make spontaneous decisions or stick to your plans?",
+    "Would you consider yourself a leader or a follower?",
+    "Do you get stressed easily or can you stay relaxed?",
+    "Are you generally assertive or passive?",
+    "Do you prefer one-on-one, small, or large group settings?",
+    "What is a cause you care deeply about?",
+    "In a team setting, do you lean more towards being task-oriented or people-oriented?",
+    "What is a topic you can give advice about?"
 ]
