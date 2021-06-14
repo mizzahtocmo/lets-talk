@@ -8,25 +8,28 @@
 
 <h1>This is a meaningful header</h1>
 
-<p id="demo"></p>
+<p id="q"></p>
 
 <div class = "container">
-    <button onclick="generateQuestion()">Next Question</button>
+    <button id = "control" onclick="startApp(); generateQuestion()">Start</button> 
 </div>
 
 <script>
 
-    function generateQuestion() {
-    var questions = ["Question #1", "Question #2", "Question #3", "Question #4"];
-
-    var currentIndex = Math.floor(Math.random() * questions.length);
-    console.log(currentIndex);
-
-    const currentQuestion = questions[currentIndex];
-    document.getElementById("demo").innerHTML = currentQuestion;
+    function startApp() {
+        var change = document.getElementById("control");
+        change.innerHTML = "Next Question";
     }
-    
+
+    function generateQuestion() {
+        fetch("questions.json")
+        .then(response => response.json())
+        .then(data => document.getElementById("q").innerHTML = data[Math.floor(Math.random() * data.length)]);
+    }
 </script> 
 
 </body>
 </html>
+
+<!-- notes:
+find some way to no longer repeat a question-->
