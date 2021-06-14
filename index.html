@@ -4,31 +4,50 @@
     <link rel="stylesheet" href="style.css">
     <title>Let's Talk!</title>
 </head>
-<body>
+<body onload="fillArray()">
 
 <h1>Let's Talk!</h1>
 
 <p id="displayQuestion"></p>
 
 <div class = "container">
-    <button id = "control" onclick="startApp(); generateQuestion()">Start</button> 
+    <button id = "control" onclick="clickButton(); generateQuestion()">Start</button> 
 </div>
 
 <script>
 
-    function startApp() {
+    var questions = [];
+
+    function clickButton() {
         var change = document.getElementById("control");
         change.innerHTML = "Next Question";
+        if (questions.length == 1)
+        {
+            change.innerHTML == "Last Question";
+        }
     }
 
-    function generateQuestion() {
+    function fillArray() {
         fetch("questions.json")
         .then(response => response.json())
         .then(data => 
             {
-                var currentQuestion = data[Math.floor(Math.random() * data.length)];
-                document.getElementById("displayQuestion").innerHTML = currentQuestion;
+                for (i = 0; i < data.length; i++)
+                {
+                    questions.push(data[i]);
+                }
+                console.log(questions);
+                console.log(questions.length);    
             });
+    }
+
+    function generateQuestion() {
+        var currentIndex = Math.floor(Math.random() * questions.length);
+        var currentQuestion = questions[currentIndex];
+        document.getElementById("displayQuestion").innerHTML = currentQuestion;
+        console.log(currentQuestion);
+        questions.splice(currentIndex, 1);
+        console.log(questions.length);
     }
 </script> 
 
