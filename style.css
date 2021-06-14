@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+  }
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/raleway/raleway-variablefont_wght-webfont.woff2') format('woff2'),
+         url('./fonts/raleway/raleway-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'ralewaybold';
+  src: url('./fonts/raleway-bold/raleway-bold-webfont.woff2') format('woff2'),
+       url('./fonts/raleway-bold/raleway-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'ralewaybold';
+  }
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 2.25em;
+    font-family: 'raleway';
+}
+
+.container {  
+    width: 100%;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+} 
