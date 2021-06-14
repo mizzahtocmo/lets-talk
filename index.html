@@ -8,7 +8,7 @@
 
 <h1>Let's Talk!</h1>
 
-<p id="q"></p>
+<p id="displayQuestion"></p>
 
 <div class = "container">
     <button id = "control" onclick="startApp(); generateQuestion()">Start</button> 
@@ -24,7 +24,11 @@
     function generateQuestion() {
         fetch("questions.json")
         .then(response => response.json())
-        .then(data => document.getElementById("q").innerHTML = data[Math.floor(Math.random() * data.length)]);
+        .then(data => 
+            {
+                var currentQuestion = data[Math.floor(Math.random() * data.length)];
+                document.getElementById("displayQuestion").innerHTML = currentQuestion;
+            });
     }
 </script> 
 
