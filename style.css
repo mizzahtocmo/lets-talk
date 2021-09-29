@@ -35,11 +35,11 @@ p {
     background-color: gray;
     border: none;
     color: black;
-    padding: 15px 32px;
+    padding: 3.0vh 4.0vw;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 3.0vh;
     margin: 4px 2px;
     cursor: pointer;
     font-family: 'Monsterrat';
